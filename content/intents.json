@@ -1,0 +1,593 @@
+{
+  "version": 1,
+  "threshold": 0.35,
+  "noMatchBelow": 0.15,
+  "aliases": {
+    "skip": "skipp",
+    "skip app": "skipp",
+    "skipp app": "skipp",
+    "whisper": "wispr",
+    "wisper": "wispr",
+    "whisper flow": "wispr",
+    "wispr flow": "wispr",
+    "dristi": "drishti",
+    "drishty": "drishti",
+    "drushti": "drishti",
+    "re coup": "recoup",
+    "recoupe": "recoup",
+    "bengaluru": "bangalore",
+    "banglore": "bangalore",
+    "emergent sh": "emergent",
+    "razor pay": "razorpay",
+    "git hub": "github",
+    "linked in": "linkedin",
+    "e mail": "email"
+  },
+  "stopwords": [
+    "a",
+    "an",
+    "the",
+    "me",
+    "you",
+    "your",
+    "did",
+    "do",
+    "does",
+    "what",
+    "whats",
+    "is",
+    "are",
+    "was",
+    "were",
+    "of",
+    "to",
+    "for",
+    "in",
+    "on",
+    "at",
+    "tell",
+    "about",
+    "show",
+    "can",
+    "i",
+    "and",
+    "or",
+    "it",
+    "this",
+    "that",
+    "have",
+    "has",
+    "any",
+    "some",
+    "something",
+    "please",
+    "with"
+  ],
+  "intents": [
+    {
+      "id": "skipp",
+      "target": "lv-skipp",
+      "label": "Skipp",
+      "chip": "something students actually use",
+      "phrases": [
+        "skipp",
+        "something students actually use",
+        "what do students use",
+        "real users",
+        "real people use",
+        "the attendance app",
+        "app for students",
+        "who uses your stuff",
+        "your most used product",
+        "skipp pathi sollu",
+        "students use panra app",
+        "attendance calculator",
+        "bunk calculator",
+        "campus app"
+      ],
+      "keywords": [
+        "skipp",
+        "attendance",
+        "bunk",
+        "students",
+        "users",
+        "srm",
+        "campus",
+        "portal",
+        "timetable"
+      ]
+    },
+    {
+      "id": "drishti",
+      "target": "lv-drishti",
+      "label": "Drishti",
+      "chip": "something with voice",
+      "phrases": [
+        "drishti",
+        "something with voice",
+        "built anything with voice",
+        "a voice product",
+        "voice agent",
+        "blind users",
+        "something for blind people",
+        "accessibility project",
+        "indian languages",
+        "screen reader",
+        "voice wala project",
+        "voice wala project dikhao",
+        "sarvam project"
+      ],
+      "keywords": [
+        "drishti",
+        "blind",
+        "accessibility",
+        "languages",
+        "sarvam",
+        "agent",
+        "screen",
+        "reader",
+        "multilingual"
+      ]
+    },
+    {
+      "id": "recoup",
+      "target": "lv-recoup",
+      "label": "Recoup",
+      "chip": "the payments project",
+      "phrases": [
+        "recoup",
+        "the payments one",
+        "the payments project",
+        "failed payments",
+        "payment recovery",
+        "revenue recovery",
+        "razorpay project",
+        "fintech project",
+        "the money project"
+      ],
+      "keywords": [
+        "recoup",
+        "razorpay",
+        "payment",
+        "payments",
+        "revenue",
+        "fintech",
+        "money",
+        "recovery"
+      ]
+    },
+    {
+      "id": "setbacks",
+      "target": "setbacks",
+      "label": "What doesn't fit on a resume",
+      "chip": "what failed",
+      "phrases": [
+        "what failed",
+        "a time you failed",
+        "biggest mistake",
+        "tell me about a mistake",
+        "what went wrong",
+        "have you been rejected",
+        "ever been rejected",
+        "your failures",
+        "enna fail aachu",
+        "kya galat hua",
+        "what didnt work"
+      ],
+      "keywords": [
+        "fail",
+        "failed",
+        "failure",
+        "failures",
+        "mistake",
+        "mistakes",
+        "rejected",
+        "rejection",
+        "wrong",
+        "setback",
+        "setbacks",
+        "lost"
+      ]
+    },
+    {
+      "id": "principles",
+      "target": "principles",
+      "label": "How I decide",
+      "chip": "how you decide",
+      "phrases": [
+        "how you decide",
+        "how do you make decisions",
+        "how do you think",
+        "your principles",
+        "what are your principles",
+        "your values",
+        "your rules",
+        "how you work",
+        "your approach"
+      ],
+      "keywords": [
+        "decide",
+        "decisions",
+        "decision",
+        "principles",
+        "values",
+        "rules",
+        "think",
+        "approach"
+      ]
+    },
+    {
+      "id": "exam_week",
+      "target": "exam-week",
+      "label": "Exam week: what I could measure",
+      "chip": "show me the data",
+      "phrases": [
+        "show me the data",
+        "what did you measure",
+        "what experiment did you run",
+        "your experiment",
+        "the results",
+        "how good is it at tanglish",
+        "tanglish test",
+        "your research",
+        "the evidence",
+        "any numbers",
+        "proof"
+      ],
+      "keywords": [
+        "experiment",
+        "experiments",
+        "data",
+        "evidence",
+        "results",
+        "measure",
+        "measured",
+        "research",
+        "tanglish",
+        "test",
+        "numbers",
+        "proof",
+        "trial"
+      ]
+    },
+    {
+      "id": "wispr_ideas",
+      "target": "wispr-ideas",
+      "label": "What I'd test first at Wispr India",
+      "chip": "what you'd do for Wispr India",
+      "phrases": [
+        "what would you do for wispr",
+        "what you'd do for wispr india",
+        "wispr india",
+        "your plan for india",
+        "first month plan",
+        "growth ideas",
+        "give me a campaign idea",
+        "campaign ideas",
+        "if we hire you",
+        "how would you grow wispr",
+        "marketing ideas"
+      ],
+      "keywords": [
+        "wispr",
+        "india",
+        "growth",
+        "grow",
+        "campaign",
+        "campaigns",
+        "plan",
+        "ideas",
+        "idea",
+        "marketing",
+        "hire",
+        "month"
+      ]
+    },
+    {
+      "id": "how_built",
+      "target": "how-built",
+      "label": "How I said this site into existence",
+      "chip": "how this site was built",
+      "phrases": [
+        "how did you build this",
+        "how did you build this site",
+        "how was this made",
+        "how this site was built",
+        "built by voice",
+        "was this made with emergent",
+        "what did voice add",
+        "what did voice change",
+        "behind the scenes",
+        "how did you use voice"
+      ],
+      "keywords": [
+        "built",
+        "build",
+        "made",
+        "emergent",
+        "dictate",
+        "dictated",
+        "dictation",
+        "site",
+        "website",
+        "behind",
+        "process"
+      ]
+    },
+    {
+      "id": "logistics",
+      "target": "logistics",
+      "label": "Start date and Bangalore",
+      "chip": "when can you start",
+      "phrases": [
+        "when can you start",
+        "start date",
+        "joining date",
+        "when can you join",
+        "can you move to bangalore",
+        "will you relocate",
+        "are you available",
+        "eppo join pannuva",
+        "kab join karoge",
+        "notice period"
+      ],
+      "keywords": [
+        "start",
+        "join",
+        "joining",
+        "date",
+        "bangalore",
+        "relocate",
+        "relocation",
+        "move",
+        "available",
+        "availability",
+        "when"
+      ]
+    },
+    {
+      "id": "contact",
+      "target": "logistics",
+      "label": "Contact",
+      "chip": "how to reach you",
+      "phrases": [
+        "how do i contact you",
+        "how to reach you",
+        "how can i reach you",
+        "your email",
+        "whats your email",
+        "your linkedin",
+        "your github",
+        "get in touch"
+      ],
+      "keywords": [
+        "contact",
+        "email",
+        "mail",
+        "linkedin",
+        "github",
+        "reach",
+        "touch",
+        "connect"
+      ]
+    },
+    {
+      "id": "more_work",
+      "target": "long-versions",
+      "label": "More work",
+      "chip": "what else you've built",
+      "phrases": [
+        "open source",
+        "open source work",
+        "pull requests",
+        "other projects",
+        "what else have you built",
+        "any hackathons",
+        "hackathons",
+        "fityou",
+        "allotiq",
+        "oneclick"
+      ],
+      "keywords": [
+        "open",
+        "source",
+        "prs",
+        "pull",
+        "requests",
+        "hackathon",
+        "hackathons",
+        "fityou",
+        "allotiq",
+        "oneclick",
+        "samsung",
+        "projects",
+        "else"
+      ]
+    },
+    {
+      "id": "about",
+      "target": "squeezed",
+      "label": "The short version",
+      "chip": "who are you",
+      "phrases": [
+        "who are you",
+        "tell me about yourself",
+        "introduce yourself",
+        "about you",
+        "the short version",
+        "your resume",
+        "your background"
+      ],
+      "keywords": [
+        "who",
+        "yourself",
+        "introduce",
+        "resume",
+        "background",
+        "nikhil"
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "say": "what did you build that students actually use",
+      "expect": "skipp"
+    },
+    {
+      "say": "show me something real people use",
+      "expect": "skipp"
+    },
+    {
+      "say": "tell me about skip",
+      "expect": "skipp"
+    },
+    {
+      "say": "Skipp pathi sollu",
+      "expect": "skipp"
+    },
+    {
+      "say": "the attendance app",
+      "expect": "skipp"
+    },
+    {
+      "say": "have you built anything with voice",
+      "expect": "drishti"
+    },
+    {
+      "say": "voice wala project dikhao",
+      "expect": "drishti"
+    },
+    {
+      "say": "something for blind people",
+      "expect": "drishti"
+    },
+    {
+      "say": "what is dristi",
+      "expect": "drishti"
+    },
+    {
+      "say": "tell me about the sarvam project",
+      "expect": "drishti"
+    },
+    {
+      "say": "the payments one",
+      "expect": "recoup"
+    },
+    {
+      "say": "what did you do with razor pay",
+      "expect": "recoup"
+    },
+    {
+      "say": "what failed",
+      "expect": "setbacks"
+    },
+    {
+      "say": "tell me about a mistake",
+      "expect": "setbacks"
+    },
+    {
+      "say": "have you ever been rejected",
+      "expect": "setbacks"
+    },
+    {
+      "say": "enna fail aachu",
+      "expect": "setbacks"
+    },
+    {
+      "say": "how do you make decisions",
+      "expect": "principles"
+    },
+    {
+      "say": "what are your principles",
+      "expect": "principles"
+    },
+    {
+      "say": "what did you measure this week",
+      "expect": "exam_week"
+    },
+    {
+      "say": "show me the data",
+      "expect": "exam_week"
+    },
+    {
+      "say": "how good is it at tanglish",
+      "expect": "exam_week"
+    },
+    {
+      "say": "what experiment did you run",
+      "expect": "exam_week"
+    },
+    {
+      "say": "what would you do for wispr in india",
+      "expect": "wispr_ideas"
+    },
+    {
+      "say": "what would you do for whisper flow",
+      "expect": "wispr_ideas"
+    },
+    {
+      "say": "your first month plan",
+      "expect": "wispr_ideas"
+    },
+    {
+      "say": "give me a campaign idea",
+      "expect": "wispr_ideas"
+    },
+    {
+      "say": "how did you build this site",
+      "expect": "how_built"
+    },
+    {
+      "say": "what did voice add",
+      "expect": "how_built"
+    },
+    {
+      "say": "was this made with emergent",
+      "expect": "how_built"
+    },
+    {
+      "say": "when can you start",
+      "expect": "logistics"
+    },
+    {
+      "say": "can you move to bengaluru",
+      "expect": "logistics"
+    },
+    {
+      "say": "eppo join pannuva",
+      "expect": "logistics"
+    },
+    {
+      "say": "how do I contact you",
+      "expect": "contact"
+    },
+    {
+      "say": "what's your email",
+      "expect": "contact"
+    },
+    {
+      "say": "what open source work have you done",
+      "expect": "more_work"
+    },
+    {
+      "say": "any hackathons",
+      "expect": "more_work"
+    },
+    {
+      "say": "who are you",
+      "expect": "about"
+    },
+    {
+      "say": "tell me about yourself",
+      "expect": "about"
+    },
+    {
+      "say": "what's the weather in chennai",
+      "expect": null
+    },
+    {
+      "say": "play some music",
+      "expect": null
+    }
+  ]
+}

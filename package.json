@@ -1,0 +1,9 @@
+{
+  "name": "wispr-challenge",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "intents": "node qa/match-reference.mjs",
+    "smoke": "playwright test qa/smoke.spec.ts"
+  }
+}
